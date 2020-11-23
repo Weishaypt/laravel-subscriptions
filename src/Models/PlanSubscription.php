@@ -152,7 +152,7 @@ class PlanSubscription extends Model
 
         $this->setTable(config('weishaypt.subscriptions.tables.plan_subscriptions'));
         $this->setRules([
-            'name' => 'required|string|strip_tags|max:150',
+            'name' => 'required|string|max:150',
             'description' => 'nullable|string|max:10000',
             'slug' => 'required|alpha_dash|max:150|unique:'.config('weishaypt.subscriptions.tables.plan_subscriptions').',slug',
             'plan_id' => 'required|integer|exists:'.config('weishaypt.subscriptions.tables.plans').',id',
