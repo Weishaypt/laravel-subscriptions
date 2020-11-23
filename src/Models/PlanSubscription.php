@@ -7,7 +7,7 @@ namespace Weishaypt\Subscriptions\Models;
 use DB;
 use Carbon\Carbon;
 use LogicException;
-use Rinvex\Sluggable\SlugOptions;
+use Spatie\Sluggable\SlugOptions;
 use Rinvex\Support\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
