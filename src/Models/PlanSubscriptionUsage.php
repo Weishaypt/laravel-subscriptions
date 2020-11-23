@@ -7,7 +7,7 @@ namespace Weishaypt\Subscriptions\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Weishaypt\Support\Traits\ValidatingTrait;
+use Rinvex\Support\Traits\ValidatingTrait;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**

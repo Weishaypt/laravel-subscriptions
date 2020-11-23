@@ -7,13 +7,13 @@ namespace Weishaypt\Subscriptions\Models;
 use DB;
 use Carbon\Carbon;
 use LogicException;
-use Spatie\Sluggable\SlugOptions;
+use Rinvex\Sluggable\SlugOptions;
 use Weishaypt\Support\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Weishaypt\Subscriptions\Services\Period;
-use Weishaypt\Support\Traits\HasTranslations;
-use Weishaypt\Support\Traits\ValidatingTrait;
+use Rinvex\Support\Traits\HasTranslations;
+use Rinvex\Support\Traits\ValidatingTrait;
 use Weishaypt\Subscriptions\Traits\BelongsToPlan;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -179,7 +179,7 @@ class PlanSubscription extends Model
             }
         });
     }
-    
+
     public function getIsActiveAttribute() {
         return $this->active();
     }

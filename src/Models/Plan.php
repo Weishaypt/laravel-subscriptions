@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Weishaypt\Subscriptions\Models;
 
 use Spatie\Sluggable\SlugOptions;
-use Weishaypt\Support\Traits\HasSlug;
+use Rinvex\Support\Traits\HasSlug;
 use Spatie\EloquentSortable\Sortable;
 use Illuminate\Database\Eloquent\Model;
-use Weishaypt\Support\Traits\HasTranslations;
-use Weishaypt\Support\Traits\ValidatingTrait;
+use Rinvex\Support\Traits\HasTranslations;
+use Rinvex\Support\Traits\ValidatingTrait;
 use Spatie\EloquentSortable\SortableTrait;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
