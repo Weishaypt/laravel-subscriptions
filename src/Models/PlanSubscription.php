@@ -70,6 +70,7 @@ class PlanSubscription extends Model
     use HasTranslations;
     use ValidatingTrait;
 
+
     /**
      * {@inheritdoc}
      */
@@ -136,6 +137,10 @@ class PlanSubscription extends Model
      */
     protected $throwValidationExceptions = true;
 
+    protected $appends = [
+        'is_active'
+    ];
+
     /**
      * Create a new Eloquent model instance.
      *
@@ -173,6 +178,10 @@ class PlanSubscription extends Model
                 $model->setNewPeriod();
             }
         });
+    }
+    
+    public function getIsActiveAttribute() {
+        return $this->active();
     }
 
     /**
