@@ -181,7 +181,7 @@ class PlanSubscription extends Model
     }
 
     public function getIsActiveAttribute() {
-        return $this->active() && $this->canceled();
+        return $this->active() && !$this->canceled();
     }
 
     /**
