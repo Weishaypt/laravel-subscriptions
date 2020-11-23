@@ -8,7 +8,7 @@ use DB;
 use Carbon\Carbon;
 use LogicException;
 use Rinvex\Sluggable\SlugOptions;
-use Weishaypt\Support\Traits\HasSlug;
+use Rinvex\Support\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Weishaypt\Subscriptions\Services\Period;
