@@ -6,7 +6,7 @@ namespace Weishaypt\Subscriptions\Providers;
 
 use Weishaypt\Subscriptions\Models\Plan;
 use Illuminate\Support\ServiceProvider;
-use Weishaypt\Support\Traits\ConsoleTools;
+use Rinvex\Support\Traits\ConsoleTools;
 use Weishaypt\Subscriptions\Models\PlanFeature;
 use Weishaypt\Subscriptions\Models\PlanSubscription;
 use Weishaypt\Subscriptions\Models\PlanSubscriptionUsage;
