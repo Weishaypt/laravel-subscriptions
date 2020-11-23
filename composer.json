@@ -1,0 +1,68 @@
+{
+    "name": "weishaypt/laravel-subscriptions",
+    "description": "",
+    "type": "library",
+    "keywords": [
+        "plan",
+        "value",
+        "laravel",
+        "feature",
+        "database",
+        "recurring",
+        "subscription"
+    ],
+    "license": "MIT",
+    "homepage": "https://sanek.dev",
+    "authors": [
+        {
+            "name": "Weishaypt",
+            "homepage": "https://sanek.dev",
+            "email": "ya@sanek.dev"
+        }
+    ],
+    "require": {
+        "php": "^7.4.0",
+        "illuminate/console": "^7.0.0",
+        "illuminate/database": "^7.0.0",
+        "illuminate/support": "^7.0.0",
+        "rinvex/laravel-support": "^4.0.0",
+        "spatie/eloquent-sortable": "^3.7.0",
+        "spatie/laravel-sluggable": "^2.2.0",
+        "spatie/laravel-translatable": "^4.2.0"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "^0.27.0",
+        "illuminate/container": "^7.0.0",
+        "phpunit/phpunit": "^9.0.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "Weishaypt\\Subscriptions\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Weishaypt\\Subscriptions\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Weishaypt\\Subscriptions\\Providers\\SubscriptionsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
