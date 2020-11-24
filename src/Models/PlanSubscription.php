@@ -138,7 +138,8 @@ class PlanSubscription extends Model
     protected $throwValidationExceptions = true;
 
     protected $appends = [
-        'is_active'
+        'is_active',
+        'plan'
     ];
 
     /**
@@ -178,6 +179,11 @@ class PlanSubscription extends Model
                 $model->setNewPeriod();
             }
         });
+    }
+
+
+    public function getPlanAttribute() {
+        return $this->plan;
     }
 
     public function getIsActiveAttribute() {
