@@ -138,8 +138,7 @@ class PlanSubscription extends Model
     protected $throwValidationExceptions = true;
 
     protected $appends = [
-        'is_active',
-        'plan_object'
+        'is_active'
     ];
 
     /**
@@ -181,10 +180,6 @@ class PlanSubscription extends Model
         });
     }
 
-
-    public function getPlanObjectAttribute() {
-        return $this->plan;
-    }
 
     public function getIsActiveAttribute() {
         return $this->active() && !$this->canceled();
