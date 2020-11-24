@@ -139,7 +139,7 @@ class PlanSubscription extends Model
 
     protected $appends = [
         'is_active',
-        'plan'
+        'plan_'
     ];
 
     /**
@@ -182,8 +182,8 @@ class PlanSubscription extends Model
     }
 
 
-    public function getPlanAttribute() {
-        return $this->plan();
+    public function getPlan_Attribute() {
+        return $this->plan;
     }
 
     public function getIsActiveAttribute() {
