@@ -183,7 +183,7 @@ class PlanSubscription extends Model
 
 
     public function getPlanAttribute() {
-        return $this->plan;
+        return $this->plan();
     }
 
     public function getIsActiveAttribute() {
