@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Weishaypt\Subscriptions\Traits;
 
+use Carbon\Carbon;
 use Weishaypt\Subscriptions\Models\Plan;
 use Weishaypt\Subscriptions\Services\Period;
 use Illuminate\Database\Eloquent\Collection;
@@ -49,7 +50,13 @@ trait HasSubscriptions
      */
     public function activeSubscriptions(): Collection
     {
-        return $this->subscriptions->reject->inactive();
+        $now = Carbon::now();
+        $subscriptions = $this->subscriptions;
+        $subscriptions = $subscriptions
+            ->whereDate('ends_at', '>', $now->toDate())
+            ->get();
+
+        return $subscriptions;
     }
 
     /**
