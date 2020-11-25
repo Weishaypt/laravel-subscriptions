@@ -51,7 +51,7 @@ trait HasSubscriptions
     public function activeSubscriptions(): Collection
     {
         $now = Carbon::now();
-        $subscriptions = $this->subscriptions;
+        $subscriptions = $this->subscriptions();
         $subscriptions = $subscriptions
             ->whereDate('ends_at', '>', $now->toDate())
             ->get();
