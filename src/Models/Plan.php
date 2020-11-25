@@ -154,6 +154,8 @@ class Plan extends Model implements Sortable
      */
     protected $rules = [];
 
+    protected $appends = ['features_object'];
+
     /**
      * Whether the model should throw a
      * ValidationException if it fails validation.
@@ -192,6 +194,10 @@ class Plan extends Model implements Sortable
             'prorate_extend_due' => 'nullable|integer|max:150',
             'active_subscribers_limit' => 'nullable|integer|max:10000',
         ]);
+    }
+
+    public function getFeaturesObjectAttribute() {
+        return $this->features()->get();
     }
 
     /**
