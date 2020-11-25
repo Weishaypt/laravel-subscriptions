@@ -10,6 +10,13 @@ use Illuminate\Database\Eloquent\Collection;
 use Weishaypt\Subscriptions\Models\PlanSubscription;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
+/**
+ * Weishaypt\Subscriptions\Traits.
+ *
+ * @property MorphMany                                                                                                $subscriptions
+ *
+ */
+
 trait HasSubscriptions
 {
     /**
