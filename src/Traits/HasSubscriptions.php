@@ -53,7 +53,7 @@ trait HasSubscriptions
         $now = Carbon::now();
         $subscriptions = $this->subscriptions();
         $subscriptions = $subscriptions
-            ->whereDate('ends_at', '>', $now->toDate())
+            ->whereDate('ends_at', '>=', $now->toDate())
             ->get();
 
         return $subscriptions;
