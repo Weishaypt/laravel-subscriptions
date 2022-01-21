@@ -70,7 +70,6 @@ class Plan extends Model implements Sortable
 {
     use HasSlug;
     use SortableTrait;
-    use HasTranslations;
     use ValidatingTrait;
 
     /**
@@ -126,16 +125,6 @@ class Plan extends Model implements Sortable
     protected $observables = [
         'validating',
         'validated',
-    ];
-
-    /**
-     * The attributes that are translatable.
-     *
-     * @var array
-     */
-    public $translatable = [
-        'name',
-        'description',
     ];
 
     /**
