@@ -55,7 +55,6 @@ class PlanFeature extends Model implements Sortable
     use HasSlug;
     use BelongsToPlan;
     use SortableTrait;
-    use HasTranslations;
     use ValidatingTrait;
 
     /**
@@ -92,17 +91,6 @@ class PlanFeature extends Model implements Sortable
         'validating',
         'validated',
     ];
-
-    /**
-     * The attributes that are translatable.
-     *
-     * @var array
-     */
-    public $translatable = [
-        'name',
-        'description',
-    ];
-
     /**
      * The sortable settings.
      *
