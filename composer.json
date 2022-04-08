@@ -35,7 +35,7 @@
         "spatie/eloquent-sortable": "^4.0.0",
         "spatie/laravel-sluggable": "^3.3.0",
         "spatie/laravel-translatable": "^5.2.0",
-        "felixkiss/uniquewith-validator": "dev-master"
+        "felixkiss/uniquewith-validator": "dev-l9-compatibility"
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": "^0.31.0",
