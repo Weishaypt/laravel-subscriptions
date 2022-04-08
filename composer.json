@@ -20,6 +20,12 @@
             "email": "ya@sanek.dev"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/laravel-shift/uniquewith-validator.git"
+        }
+    ],
     "require": {
         "php": "^8.0.0",
         "illuminate/console": "^9.0.0 || ^10.0.0",
